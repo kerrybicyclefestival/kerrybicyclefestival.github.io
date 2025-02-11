@@ -14,15 +14,22 @@ This is an archive of the festival website ([kerrybicyclefestival.org](http://ke
 
 #### Festival Websites
 
-- [2008](/2008)
-- [2009](/2009)
-- [2010](/2010)
-- [2011](/2011)
-- [2012](/2012)
-- [2013](/2013)
+- [2008](/docs/2008)
+- [2009](/docs/2009)
+- [2010](/docs/2010)
+- [2011](/docs/2011)
+- [2012](/docs/2012)
+- [2013](/docs/2013)
 
 
+#### Festival Brochures
 
+- [2008](/docs/brochures/kbf_08.pdf)
+- [2009](/docs/brochures/kbf_09.pdf)
+- [2010](/docs/brochures/kbf_10.pdf)
+- [2011](/docs/brochures/kbf_11.pdf)
+- [2012](/docs/brochures/kbf_12.pdf)
+- [2013](/docs/brochures/kbf_13.pdf)
 
 
 
