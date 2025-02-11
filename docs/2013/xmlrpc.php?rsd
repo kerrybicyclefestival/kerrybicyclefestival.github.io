@@ -4,11 +4,11 @@
     <engineLink>https://wordpress.org/</engineLink>
     <homePageLink>http://kerrybicyclefestival.org</homePageLink>
     <apis>
-      <api name="WordPress" blogID="1" preferred="true" apiLink="http://kerrybicyclefestival.org/xmlrpc.php" />
-      <api name="Movable Type" blogID="1" preferred="false" apiLink="http://kerrybicyclefestival.org/xmlrpc.php" />
-      <api name="MetaWeblog" blogID="1" preferred="false" apiLink="http://kerrybicyclefestival.org/xmlrpc.php" />
-      <api name="Blogger" blogID="1" preferred="false" apiLink="http://kerrybicyclefestival.org/xmlrpc.php" />
-      	<api name="WP-API" blogID="1" preferred="false" apiLink="http://kerrybicyclefestival.org/wp-json/" />
+      <api name="WordPress" blogID="1" preferred="true" apiLink="https://kerrybicyclefestival.github.io/xmlrpc.php" />
+      <api name="Movable Type" blogID="1" preferred="false" apiLink="https://kerrybicyclefestival.github.io/xmlrpc.php" />
+      <api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://kerrybicyclefestival.github.io/xmlrpc.php" />
+      <api name="Blogger" blogID="1" preferred="false" apiLink="https://kerrybicyclefestival.github.io/xmlrpc.php" />
+      	<api name="WP-API" blogID="1" preferred="false" apiLink="https://kerrybicyclefestival.github.io/wp-json/" />
 	    </apis>
   </service>
 </rsd>

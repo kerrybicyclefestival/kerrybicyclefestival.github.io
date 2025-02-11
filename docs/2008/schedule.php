@@ -23,13 +23,13 @@
 <strong>Date:</strong> Saturday, 19th April<br />
 <strong>Venue:</strong> Ashe Memorial Hall, Tralee.<br />
     <strong>Time:</strong> 12.00pm <br />
-<strong>Event Details:</strong> <a href="http://kerrybicyclefestival.org/index.php?p=family_cycle">Family Cycle</a> - One of the highlights of the festival will be a 'Family Cycle' on Saturday Afternoon, where we hope to get as many people as possible on to their bikes, the cycle will be fully supervised, and will have a 'Cycle Garda' Escort. We will be meeting up at 12 noon at the Ashe Memorial Hall, and the cycle pace will be leisurely to Blennerville. </p>
+<strong>Event Details:</strong> <a href="https://kerrybicyclefestival.github.io/index.php?p=family_cycle">Family Cycle</a> - One of the highlights of the festival will be a 'Family Cycle' on Saturday Afternoon, where we hope to get as many people as possible on to their bikes, the cycle will be fully supervised, and will have a 'Cycle Garda' Escort. We will be meeting up at 12 noon at the Ashe Memorial Hall, and the cycle pace will be leisurely to Blennerville. </p>
     
    <p>
 <strong>Date:</strong> Saturday, 19th April<br />
 <strong>Venue:</strong> Town Centre, Tralee.<br />
     <strong>Time:</strong> 14.00pm <br />
-<strong>Event Details:</strong> <a href="http://kerrybicyclefestival.org/index.php?p=peal">Peal</a> - The freely distributed KBF bicycle bells will be put to good use on this fun cycle through Tralee town centre. A route has yet to be devised. All participants will also have the opportunity to have a Bicycle Portrait taken after the cycle. The KBF bicycle elves will be on hand to tune up any bikes that need a little TLC. </p>
+<strong>Event Details:</strong> <a href="https://kerrybicyclefestival.github.io/index.php?p=peal">Peal</a> - The freely distributed KBF bicycle bells will be put to good use on this fun cycle through Tralee town centre. A route has yet to be devised. All participants will also have the opportunity to have a Bicycle Portrait taken after the cycle. The KBF bicycle elves will be on hand to tune up any bikes that need a little TLC. </p>
 
    <p>
 <strong>Date:</strong> Saturday, 19th April<br />

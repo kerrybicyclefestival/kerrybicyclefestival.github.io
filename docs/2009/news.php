@@ -31,7 +31,7 @@
     
     <p class="post-footer">
       <em>posted by inclued at 
-    <a class="post-footer-link" href="http://kerrybicyclefestival.org/news/2008/03/re-testo.html" title="permanent link"> 7:02 PM </a></em>
+    <a class="post-footer-link" href="https://kerrybicyclefestival.github.io/news/2008/03/re-testo.html" title="permanent link"> 7:02 PM </a></em>
       
 
          <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=3815906178005883719&postID=5972709311591268116"location.href=http://www.blogger.com/comment.g?blogID=3815906178005883719&postID=5972709311591268116;><span style="text-transform:lowercase">0 Comments</span></a>
@@ -74,7 +74,7 @@
     
     <p class="post-footer">
       <em>posted by inclued at 
-    <a class="post-footer-link" href="http://kerrybicyclefestival.org/news/2008/03/testo.html" title="permanent link"> 4:47 PM </a></em>
+    <a class="post-footer-link" href="https://kerrybicyclefestival.github.io/news/2008/03/testo.html" title="permanent link"> 4:47 PM </a></em>
       
 
          <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=3815906178005883719&postID=2940061394132446369"location.href=http://www.blogger.com/comment.g?blogID=3815906178005883719&postID=2940061394132446369;><span style="text-transform:lowercase">0 Comments</span></a>

@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 
-Sitemap: http://kerrybicyclefestival.org/sitemap.xml.gz
+Sitemap: https://kerrybicyclefestival.github.io/sitemap.xml.gz

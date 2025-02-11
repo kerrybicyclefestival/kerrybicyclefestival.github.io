@@ -119,11 +119,11 @@ ul.playlist li .metadata ul li span{ display:none}
 ul.playlist li .controls .statusbar .annotation{ position:absolute;  background-color:transparent;  top:0px;  color:#666;  text-align:right;  margin-left:10px;  height:0.5em}
 ul.playlist li .controls .statusbar .annotation:hover{ z-index:12; /* sit on top of note */}
 ul.playlist li .controls .statusbar .annotation span.bubble{ /* using &middot; */ display:inline-block;  background-color:#fff;  border:1px solid #666;  border-radius:6px;  -moz-border-radius:6px;  -webkit-border-radius:6px}
-ul.playlist li .controls .statusbar .annotation span{ display:block;  background:transparent url(http://kerrybicyclefestival.org/wp-content/themes/mixtape/image/divot.png) no-repeat 50% 0px;  width:15px;  margin-left:-15px;  height:12px;  text-align:center}
+ul.playlist li .controls .statusbar .annotation span{ display:block;  background:transparent url(https://kerrybicyclefestival.github.io/wp-content/themes/mixtape/image/divot.png) no-repeat 50% 0px;  width:15px;  margin-left:-15px;  height:12px;  text-align:center}
 ul.playlist li .controls .statusbar .annotation.alt{ top:auto;  bottom:0px}
 ul.playlist li .controls .statusbar .annotation span:hover{ cursor:none; /* Fx3 rules. */ margin-top:0.1em}
 ul.playlist li .controls .statusbar .annotation.alt span:hover{ margin-top:-0.1em}
-ul.playlist li .controls .statusbar .annotation.alt span{ background:transparent url(http://kerrybicyclefestival.org/wp-content/themes/mixtape/image/divot-bottom.png) no-repeat 50% bottom}
+ul.playlist li .controls .statusbar .annotation.alt span{ background:transparent url(https://kerrybicyclefestival.github.io/wp-content/themes/mixtape/image/divot-bottom.png) no-repeat 50% bottom}
 ul.playlist li .note{ position:absolute;  display:none;  left:0px;  top:0px;  z-index:10;  font-size:x-small;  padding:2px 4px 2px 4px;  width:auto;  color:#666;  background-color:#fff;  border:1px solid #ccc;  border-radius:6px;  -moz-border-radius:6px;  -webkit-border-radius:6px;  font-style:normal;  font-weight:bold;  font-family:arial,tahoma,verdana,"sans serif";  letter-spacing:0px;  margin-top:1.1em}
 ul.playlist li .note.alt{ margin-top:-1.32em}
 ul.playlist li .note:hover{ display:block !important}
@@ -177,4 +177,4 @@ ul.playlist.bubblegum li .timing, ul.playlist.use-peak.bubblegum li .peak{ backg
 ul.playlist.use-spectrum.bubblegum li.sm2_playing .spectrum-container{ background-color:#fac;  border-color:#fce}
 ul.playlist.use-spectrum.bubblegum li.sm2_playing .spectrum-container .spectrum{ background-color:#fff}
 ul.playlist.bubblegum.use-peak li .peak .l, ul.playlist.bubblegum.use-peak li .peak .r{ border-color:#fff;  background-color:#fff}
-ul.playlist.shiny li.sm2_paused, ul.playlist.shiny li.sm2_playing{ background-image:url(http://kerrybicyclefestival.org/wp-content/themes/mixtape/image/top-highlight.png);  background-repeat:repeat-x;  background-position:0px -1px;  _background-image:none; /* can't be bothered with IE 6. */}
+ul.playlist.shiny li.sm2_paused, ul.playlist.shiny li.sm2_playing{ background-image:url(https://kerrybicyclefestival.github.io/wp-content/themes/mixtape/image/top-highlight.png);  background-repeat:repeat-x;  background-position:0px -1px;  _background-image:none; /* can't be bothered with IE 6. */}
