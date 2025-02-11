@@ -1,0 +1,419 @@
+body {
+    padding: 20px 0px 0px 50px;
+    font-family: Arial, Helvetica, sans-serif;
+  /*  font-family: "Georgia", Georgia, Times, serif;*/
+    background: #fff;
+	letter-spacing: 1px;
+	text-align:justify;
+	vertical-align:middle;
+	font-size:12px;	
+  }
+
+
+#container {
+    width: 700px;
+    /*background: #FF0;
+    */
+  }
+
+
+#header {
+    /* background-color: #ddd;
+    */ 
+     width: 790px;
+    /* margin: 0 0 0 10px;
+    padding: 0 0 5px 0;
+    padding: 0;
+    */
+  }
+
+
+.alt {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    text-indent: -50000px;
+  }
+
+
+#logo {
+    /* background-color : #fff;
+    */ background-image : url('images/logo.png');
+    background-position : 0 0;
+    background-repeat : no-repeat;
+    display : block;
+    height : 100px;
+    margin-bottom : 20px;
+    margin-top : 0px;
+    margin-left : -5px;
+ 
+  }
+
+#header a:hover {
+    color: #00ff00;
+background: #fbe400;
+background-image : url('images/logo.png');
+   width :600px;
+height : 100px;
+/*
+  background-image : url('images/logo.png');
+    color: #ffffff;
+    background: #000000;
+    */text-decoration: none;
+  }
+
+
+#left {
+    /*width: 150px;
+    */float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+    /*background: #ddd;
+    */;
+  }
+
+
+#main {
+    float: left;
+    width: 450px;
+    /*color: #0F0F0F;
+    *//*padding-top: 20px;
+    *//*background: #ddd;
+    */
+  }
+
+
+#footer {
+    /* background-color : #fff;
+    */ /*clear: all;
+    */ /*background-color : #ddd;
+    */float: right;
+    /* display : block;
+    */ /* height : 82px;
+    */ margin-bottom : 1px;
+    margin-top : 1px;
+    /* width :400px;
+    */width :100%;
+  }
+  
+  #sub_footer {
+    background-color : #fbe400;
+     margin-bottom : 1px;
+    margin-top : 0px;
+    /* width :400px;
+    */width :100%;
+	position:relative;
+	float:right;
+	}
+/*	
+#sponsor_logos a {
+	border:none; 
+	text-decoration: none;
+	}
+#sponsor_logos a:visited {	
+border:none; 
+text-decoration: none; }
+
+#sponsor_logos a:hover {	
+border:none; 
+text-decoration: none;
+}
+#sponsor_logos a:active {
+	border:none; 
+	text-decoration: none;
+	}
+ */
+
+#buttons {
+    /* background-color : #fff;
+    *//*float: left;
+    */ /* background-color : #ddd;
+    */ /* display : block;
+    */ /* height : 82px;
+    */ margin-bottom : 5px;
+    margin-top : 1px;
+    /*width :400px;
+    */;
+  }
+
+
+#footer p {
+    font-size: 10px;
+    line-height: 1.2em;
+    padding: 1px 1px 1px 1px;
+  }
+
+
+a {
+    color: #1775a3;
+  }
+
+
+a:hover {
+ color: #f6e400;
+    background: #1775a3;
+/*
+    color: #ffffff;
+    background: #000000;*/
+    text-decoration: none;
+  }
+
+
+a.nohover:hover {
+    background-image : url('images/logo.png');
+    border: none;
+  }
+
+
+#nav a {
+    color: #f6e400;
+    /*color: #000000;
+    */text-decoration: none;
+    background: #6f9e3f;
+    /*background: #DDDDDD;
+    */
+  }
+
+
+#nav a#active {
+    text-decoration : none;
+    /*color : #000000;
+    background-color : #AAAAAA;*/
+background:none;
+    color : #ae2063;
+    font-weight : bold;
+  }
+
+
+#nav a:hover {
+    color: #f6e400;
+    background: #1775a3;
+    /*color: #ffffff;
+    background: #000000;
+    */text-decoration: none;
+  }
+
+
+#nav a:hover#active {
+    color: #1775a3;
+    background: none;
+    /*color: #ffffff;
+    background: #000000;
+    */text-decoration: none;
+  }
+
+
+h1 {
+    font-size: 24px;
+    padding: 0px 0px 5px 0px;
+    font-weight: normal;
+	color:#8baa4b;
+
+  }
+
+
+h2 {
+    font-size: 14px;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+color: #ae1c60;
+  }
+
+
+p {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding: 0px 0px 10px 0px;
+  }
+  
+.links p {
+    font-size: 12px;
+    line-height: 1em;
+    padding: 0px;
+  }
+
+.highlight {
+    color: #f6e400;
+    /*color: #000000;
+    */
+    background: #6f9e3f;
+    /*background: #DDDDDD;
+    */
+  }
+
+
+
+.tablecontent {
+    padding-right: 30px;
+    padding-top: 22px;
+  }
+
+
+.tablewhere {
+    font-size: 12px;
+  }
+
+
+.submitbutton {
+    color:#FFFFFF;
+    background: #000000;
+    font-size: 10px;
+    font-family: "Georgia", Georgia, Times, serif;
+    border: 3px double #FFFFFF;
+  }
+
+
+.input {
+    font-size: 10px;
+    font-family: "Georgia", Georgia, Times, serif;
+  }
+
+
+#left ul {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 0px 5px;
+    list-style: none;
+  }
+
+
+#left li {
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+    font-size: 11px;
+  }
+
+
+#left a {
+    padding: 2px 2px 2px 2px;
+  }
+
+
+#left a:hover {
+    text-decoration: none;
+    padding: 2px 2px 2px 2px;
+  }
+
+
+#sponsor {
+    padding-left: 5px;
+    padding-top: 10px;
+  }
+
+
+#sponsor a {
+    color: #000000;
+  }
+
+
+#sponsor a:hover {
+    color: #ffffff;
+    background: #000000;
+    text-decoration: none;
+  }
+
+
+#sponsor a.nohover:hover {
+    background: none;
+    border: none;
+  }
+
+
+#sponsor a.nohover {
+    background: none;
+    border: none;
+  }
+
+/*logo dont go black bak*/
+
+#header a {
+    color: #0000ff;
+  }
+
+
+#header a:hover {
+    /*color: #ffffff;
+    */background-image : url('images/logo.png');
+		background-repeat:no-repeat;
+    text-decoration: none;
+  }
+
+
+#header a.header:hover {
+    /*background: none;
+    */background-image : url('images/y_logo.png');
+		background-repeat:no-repeat;
+    border: none;
+  }
+
+
+#header a.nohover:hover {
+    background-image : url('images/y_logo.png');
+		background-repeat:no-repeat;
+    /*background: none;
+    */border: none;
+  }
+
+
+#header a.nohover {
+    /*background: none;
+    */background-image : url('images/y_logo.png');
+	background-repeat:no-repeat;
+    border: none;
+  }
+
+#objectives{
+width:auto;
+	color: #000;
+	background-color:#6f9e3f;
+	}
+
+#objectives ul {
+list-style:url(images/bullet_point.jpg);
+list-style-position:outside;
+list-style-type:circle;
+	} 
+
+#objectives ul li {
+	font-size: 12px;
+	}
+
+#objectives2{
+width:auto;
+	}
+	
+	#point1 {
+	background-image:url(images/bullet_point2.png);
+	background-position:left;
+	background-repeat:no-repeat;
+	height:30px;
+	width:auto;
+	font-size: 12px;
+
+	}
+	
+	.point_text {
+	margin-left:30px;
+	height:inherit;
+	text-align:left;
+	vertical-align:middle;
+	}
+	
+		.point_text2 {
+	margin-left:30px;
+	padding-top:10px;
+	height:inherit;
+	text-align:left;
+	vertical-align:middle;
+	}
+	
+	li { font-size:12px;}
+	
+   
+	
+
+
+	

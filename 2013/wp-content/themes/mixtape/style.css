@@ -1,0 +1,731 @@
+/*
+THEME NAME: Mixtape
+THEME URI: http://www.allancole.com/wordpress/themes/mixtape/
+DESCRIPTION: A music lover’s theme developed specifically for sharing music over the internet. This theme utilizes the work of <a href="http://www.plaintxt.org/themes/sandbox/" target="_blank">Sandbox</a>, <a href="http://devkick.com/lab/tripoli/" target="_blank">Tripoli</a>, and <a href="http://www.schillmania.com/projects/soundmanager2/" target="_blank">SoundManager2</a>. A ton of thanks goes out to <a href="http://www.plaintxt.org/" target="_blank">Scott Allan Wallick</a>, <a href="http://monc.se/kitchen" target="_blank">David Helsing</a>, and <a href="http://www.schillmania.com/" target="_blank">Scott Schiller</a>.
+VERSION: 1.0.2
+AUTHOR: Allan Cole
+AUTHOR URI: http://www.allancole.com/wordpress/
+TAGS: Mp3, Audio, Fixed Width, 1 Column, 2 Column, Widgetized, Minimal, Gravatar Support.
+.
+This work is released under GNU General Public License, version 2 (GPL).
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Please leave the footer links in tact. THANKS!
+.
+*/
+
+/* STRUCTURE
+------------------------------------------
+
+1.0 BASE IMPORTS
+2.0 GLOBALS
+3.0 HEADER
+4.0 MENU
+5.0 CONTAINER & CONTENT
+	5.1 HOME
+	5.2 SINGLE PAGE
+	5.3 ATTACHMENT
+	5.4 LINKS PAGE TEMPLATE
+	5.5 ARCHIVE PAGE TEMPLATE
+	5.6 SEARCH PAGE
+	5.5 PLAIN PAGE
+6.0 MP3 PLAYER CSS
+	6.1 DARK THEME (Sound Manager 2 mp3 Player styles)
+	6.2 MP3 LIST (1 Column)
+	6.3 MP3 COLUMN (2 Column)
+	6.4 BLOG CONTENT (1 Column)
+	6.5 BLOG COLUMN (2 Column)
+7.0 NAVIGATION
+8.0 COMMENTS & FORMS
+9.0 SIDEBAR
+10.0 Wordpress 2.5+ Shortcode Styles
+11.0 FOOTER
+
+------------------------------------------ */
+
+/* 1.0 BASE IMPORTS
+------------------------------------------ */
+@import url(tripoli/tripoli.base.css); 
+@import url(tripoli/plugins/tripoli.visual.css); 
+@import url(tripoli/plugins/tripoli.type.css); 
+
+/* 2.0 GLOBALS
+------------------------------------------ */
+html{background: #fbe400; color:#666;line-height:1;font-family:"Helvetica Neue","Helvetica",helvetica,arial,sans-serif;margin:0;padding:0;}
+body{margin:0;padding:0px;}
+a, a:link, a:visited {text-decoration:none;color:#6E993D;}
+a:hover, a:active {text-decoration:none;color:#AE1C60;}
+img,img.alignnone {margin: 0 0 1em 0;clear:both;float:none;display:block;}
+img.alignleft, .alignleft {margin:0 10px 1em 0px;clear:left;float:left;}
+img.alignright, .alignright {margin:0 0 1em 10px;clear:right;float:right;}
+img.aligncenter, .aligncenter {margin:0 auto;position:relative;clear:none;}
+blockquote{margin-top:1em;margin-bottom:1em;color:#000;font-style:italic;}
+abbr {border-bottom:0px solid #FFF;text-transform:none;font-size:85%;letter-spacing:.1em;cursor:auto;}
+abbr[title]{border-bottom:0px dotted black;cursor:auto;}
+h1,h2,h3,h4,h5,h6 {color:black;}
+
+/* 3.0 HEADER
+------------------------------------------ */
+
+div#header {
+	text-align: left;
+	padding: 0;
+	background: #fbe400;
+	
+	clear: both;
+	float: none;
+	display: block;
+}
+
+div#header img{
+		margin: 0 auto;
+	width: 800px;
+	height:200px;
+	float: none;
+	clear: both;
+	
+}
+/*
+div#header h1#blog-title {
+	margin: 0 auto;
+	width: 800px;
+	float: none;
+	clear: both;
+}*/
+
+div#header h1#blog-title a {
+	display: block;
+	height: 4.7em;
+	line-height: 4.7em;
+	font-size: 1em;
+	color: #1775A3;
+	letter-spacing: -0.03em;
+	margin: 0 auto;
+	width: 800px;
+}
+div#header h1#blog-title a:hover {
+	color: #AE1C60;
+}
+div#header h1#blog-title a #blog-heading {
+	display: block;
+	float: left;
+}
+div#header h1#blog-title a #blog-description {
+	font-weight: normal;
+	font-size: 0.65em;
+	font-weight: 200;
+	letter-spacing: 0.05em;
+	float: right;
+}
+div#access div.skip-link {
+	display: none;
+}
+
+
+/* 4.0 MENU
+------------------------------------------ */
+
+div#menu {
+	font-size: 1em;
+	height: 4.5em;
+	background: transparent;
+	display: block;
+	width: 100%;
+	float: none;
+	clear: both;
+}
+div#menu ul {
+	margin: 0 auto;
+	width: 820px;
+}
+div#menu ul a {
+	font-size: 1em;
+	font-weight: 800;
+	text-decoration: none;
+	line-height: 4.5em;
+}
+div#menu ul, div#menu ul ul, div#menu ul li {
+	height: 4.5em;
+	list-style: none;
+	display: block;
+}
+div#menu ul li {
+	float: left;
+}
+div#menu ul li a {
+	padding: 0 1em;
+	line-height: 4.5em;
+	height: 4.5em;
+	display: block;
+}
+div#menu ul li a:hover {
+	background: #1775A3;
+	color:#fbe400;
+}
+div#menu ul ul {
+	display: none;
+}
+div#menu ul ul li {
+	float: none;
+	height: 2em;
+	padding: 0;
+}
+div#menu ul ul li a {
+	margin: 0;
+	padding: 0;
+	height: 2em
+}
+div#menu ul li:hover ul {
+	display: block;
+	font-size: 0.9em;
+	padding-top: 0em;
+	position: absolute;
+}
+div#menu ul li:hover ul {
+	float: none;
+	width: 200px;
+	z-index: 99
+}
+div#menu ul li:hover ul li a {
+	background: #FFF;
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	line-height: 2em;
+	height: 2em;
+	z-index: 100
+}
+
+/* 5.0 CONTAINER & CONTENT
+------------------------------------------ */
+
+div#container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 3em 0 3em 0;
+	background: #FFFFFF;
+	border-top:solid #1775A3 5px;
+	border-bottom:solid #AE1C60 5px;
+}
+div#container h2.entry-title, div#container h2 {
+	clear: both;
+	margin: 0;
+	font-weight: 800;
+	width: 800px;
+	display: block;
+	float: left;
+	position: relative;
+	font-size: 3em;
+	/*
+			background:#6E993D;
+	color:#fbe400;
+	padding:4px;
+	margin-bottom:10px; 
+	*/
+
+}
+div#container h2 .the-title {
+	width: 62%;
+	display: block;
+	float: left;
+		background:#6E993D;
+	color:#fbe400;
+	padding:2px 5px;
+	margin-bottom:10px; 
+}
+div#container h3.entry-title, div#container h3 {
+	clear: both;
+	margin: 0;
+	font-weight: 800;
+	width: 800px;
+	display: block;
+	position: relative;
+	float: left;
+}
+div#container h3 .the-title {
+	width: 62%;
+	display: block;
+	float: left;
+}
+div#container ul, div#container ol {
+	margin: 1em 0;
+}
+div#container ul li ul, div#container ol li ol {
+	margin: 0 0 0 2em;
+}
+/*
+div#container .entry-meta {
+	color: #AFAFAF;
+	font-size: 0.9em;
+	letter-spacing: .03em;
+}*/
+
+div#container p code, div#container p pre {
+	padding: 1em;
+	background: #EEE;
+	color: #888;
+	display: block;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+div#content .post .entry-content h2, div#content .post .entry-content h3, div#content .post .entry-content h4 {
+	width: 100%;
+}
+
+div#content {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	clear: both;
+	float: none;
+	display: table;
+}
+div#content-column {
+	width: 820px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	clear: both;
+	float: none;
+	display: table;
+}
+
+	/* 5.1 HOME */
+	.home div#content .post h2.entry-title {width:66%;}
+	.home div#content .post h2 .the-title {width:98%;}
+	.home div#content .post h2 span.entry-date, h2.page-title span {position:absolute;display:inline;left:533px;width:265px;margin:0;text-align:left;line-height:0.9em;float:right;font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif; background-color:#AE1C60; color:#ffffff; padding:4px;}
+	.home div#content div.post:hover {background:#eee;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+	.home div#content .post .entry-content {width:62%;float:left;margin: 0 3em 6em 0;}
+	.home div#content .post .entry-meta {width:33.3%;float:left;margin:0;}
+	
+	/* 5.2 SINGLE PAGE */
+	.single div#content .post h2.entry-title {width:66%;}
+	.single div#content .post h2 .the-title {width:98%;}
+	.single div#content .post h2 span.entry-date, h2.page-title span {position:absolute;display:inline;left:533px;width:265px;margin:0;text-align:left;line-height:0.9em;float:right;font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	.single div#content .post .entry-content {width:62%;float:left;margin: 0 3em 3em 0;}
+	.single div#content .post .entry-meta {width:33.3%;float:left;margin:0;}
+	
+	/* 5.3 ATTACHMENT */
+	.attachment div#content .attachment h2.entry-title {width:66%;}
+	.attachment div#content .attachment h2 .the-title {width:98%;}
+	.attachment div#content .attachment h2 span.entry-date, h2.page-title span {position:absolute;display:inline;left:533px;width:265px;margin:0;text-align:left;line-height:0.9em;float:right;font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	.attachment div#content .attachment .entry-content {width:62%;float:left;margin: 0 3em 3em 0;}
+	.attachment div#content .attachment .entry-meta {width:33.3%;float:left;margin:0;}
+	
+	/* 5.4 LINKS PAGE TEMPLATE */
+	div.links-page-template div#content .page .entry-content {width:75%;float:left;margin: 0 0 3em 0;}
+	div.links-page-template div#content .page .entry-content ul#links-page {display:block;list-style:none;}
+	div.links-page-template div#content .page .entry-content ul#links-page li.linkcat {width:200px;float:left;display:block;}
+	div.links-page-template div#content .page .entry-content ul#links-page li.linkcat ul{margin:0 0 0 0;}
+	div.links-page-template div#content .page .entry-content ul#links-page li.linkcat ul li {list-style:none;}
+	div.links-page-template div#content .page .entry-content ul li.linkcat h3 {width:inherit;clear:both;float:none;}
+	div.links-page-template div#content .page .entry-meta {width:25%;float:left;margin:0;}
+	
+	/* 5.5 ARCHIVE PAGE TEMPLATE */
+	.archive div#content h2 {clear:both;margin:0 0 1.5em 0;
+		margin:0 0 1.5em 0;display:inline-block;text-align:left;line-height:0.9em;font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif; background-color:#AE1C60; color:#ffffff; padding:4px;
+
+}
+
+.archive div#content h2  .archiveKey{
+	color:#fbe400;
+}
+	.archive div#content .post {margin:3em 0;}
+	.archive div#content .post h2 span.entry-date, h2.page-title span {font-weight:100;position:absolute;display:inline;left:533px;margin:0;text-align:left;float:right;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	.archive div#content .post h3 span.entry-date, h3.page-title span {font-weight:300;position:absolute;display:block;left:533px;margin-right:0;text-align:left;float:right;}
+	.archive div#content .post .entry-content {width:62%;float:left;margin: 0 3em 3em 0;}
+	.archive div#content .post .entry-meta {width:33.3%;float:left;margin:0;}
+	.archive div#content .archive-meta {width:62%;font-size:0.9em;}
+	
+	/* 5.6 SEARCH PAGE */
+	.search div#content h2 {clear:both;margin:0 0 1.5em 0;}
+	.search div#content .post, .search div#content .page {margin:3em 0;}
+	.search div#content .post h2 span.entry-date, .search div#content .page h2 span.entry-date, h2.page-title span {font-weight:100;position:absolute;display:inline;left:533px;margin-right:0;text-align:left;float:right;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	.search div#content .post h3 span.entry-date, .search div#content .page h3 span.entry-date, h3.page-title span {font-weight:300;position:absolute;display:block;left:533px;margin-right:0;text-align:left;float:right;}
+	.search div#content .post .entry-content, .search div#content .page .entry-content {width:62%;float:left;margin: 0 3em 3em 0;}
+	.search div#content .post .entry-meta, .search div#content .page .entry-meta {width:33.3%;float:left;margin:0;}
+	.search div#content .archive-meta {width:62%;font-size:0.9em;}
+	
+	/* 5.5 PLAIN PAGE */
+	.page div#content .page {margin:3em 0;clear:both;float:none;display:block;}
+	.page div#content .page .entry-content {width:62%;float:left;margin: 0 3em 3em 0;display:block;clear:both;}
+	.page div#content .page .entry-meta {width:33.3%;float:left;margin:0;}
+	
+	div#content .entry-meta {
+		color:#1775A3;
+
+	}
+	
+		div#content .entry-meta  a{
+			background-color:#1775A3;
+			color:#fbe400;
+			padding:1px 4px;
+		}
+		
+		/* 5.6 events PAGE */
+	.single div#content .event h2.entry-title {width:66%;}
+	.single div#content .event h2 .the-title {width:98%;}
+.single div#content .event h2 span.entry-date, h2.page-title span {position:absolute;display:inline;left:533px;width:265px;margin:0;text-align:left;line-height:0.9em;float:right;font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif; background-color:#AE1C60; color:#ffffff; padding:4px; }
+.single div#content .event .entry-content {width:62%;float:left;margin: 0.1em 2em 2em 0; font-size:1.5em;line-height:1.4em;}
+	.single div#content .event .entry-meta {width:33.3%;float:left;margin:0;}
+.single div#content .event h2 span.entry-date{
+	margin-top:-2px; /* why */
+}
+
+/* 6.0 MP3 PLAYER CSS
+------------------------------------------ */
+.spectrum-container{display:none}
+ul.use-spectrum li.sm2_playing .spectrum-container{position:absolute;left:0px;top:0px;margin-left:-266px;display:block;background:transparent;border:1px solid #9cf; -moz-border-radius:4px}
+ul.use-spectrum .spectrum-box{ position:relative;width:255px;font-size:1em;padding:2px 0px;height:1em;overflow:hidden}
+ul.use-spectrum .spectrum-box .spectrum{ position:absolute;left:0px;top:-2px;margin-top:20px;display:block;font-size:1px;width:1px;height:1px; /* set to 50px for a thick line,1px for a thin line,etc. */ overflow:hidden;background-color:#fff}
+ul.playlist {list-style-type:none;margin:0px;padding:0px;position:relative;display:block;}
+ul.playlist li{background:transparent;position:relative;display:table;width:100%;clear:both;float:none;font-size:1.75em;line-height:1em;letter-spacing:0px;color:#666;padding:0.75em 0.5em 0.75em 0.5em;margin:0;border:none;-webkit-transition-property:none;-webkit-transition:none;}
+ul.playlist li a{position:relative;display:block;text-decoration:none;font-weight:800;padding:0;color:#6E993D;font-size:2em;line-height:1em;letter-spacing:-1px;outline:none;z-index:2;text-shadow:0 0 0 #fff; /* stupid Safari "fat"font rendering tweak */}
+ul.playlist li.sm2_playing, ul.playlist li.sm2_paused, ul.playlist li.sm2_playing a{ color:#fff;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+ul.playlist li:hover{background-color:#eee;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+ul.playlist li:hover a{color:#AE1C60;}
+ul.playlist li.sm2_playing, ul.playlist li.sm2_playing:hover{background-color:#69c;}
+ul.playlist li.sm2_paused{background-color:#999;}
+ul.playlist li.sm2_playing{ }
+ul.playlist li.sm2_playing:hover a, ul.playlist li.sm2_paused a{color:#fff;}
+ul.playlist li .controls{ display:none}
+ul.playlist li .peak, ul.playlist.use-peak li .peak{ display:none;  position:absolute;  top:0.55em;  right:0.5em}
+ul.playlist li.sm2_playing .controls, ul.playlist li.sm2_paused .controls{ position:relative;  display:block}
+ul.playlist.use-peak li.sm2_playing .peak, ul.playlist.use-peak li.sm2_paused .peak{ display:inline;  display:inline-block}
+ul.playlist.use-peak li .peak{display:none;}
+ul.playlist li.sm2_paused .controls{ background-color:#666}
+ul.playlist li:hover .controls .statusbar{position:relative;cursor:ew-resize;cursor:-moz-grab;cursor:grab}
+ul.playlist li.sm2_paused .controls .statusbar{background-color:#ccc}
+ul.playlist li .controls{ position:relative; clear:both;float:none;margin-top:0.25em 0 0 0;padding-right:0.5em;background-color:#9cf}
+ul.playlist li .controls .statusbar{ position:relative;height:0.5em;background-color:#cdf;border:2px solid #fff;border-radius:2px;  -moz-border-radius:2px;  -webkit-border-radius:2px;  overflow:hidden;  cursor:-moz-grab;  cursor:grab}
+ul.playlist li .controls.dragging .statusbar{cursor:-moz-grabbing;cursor:grabbing}
+ul.playlist li .controls .statusbar .position, ul.playlist li .controls .statusbar .loading, ul.playlist li .controls .statusbar .annotation{ position:absolute;  left:0px;  top:0px;  height:0.5em}
+ul.playlist li .controls .statusbar .position{background-color:#369;  border-right:3px solid #369;  border-radius:3px;  -moz-border-radius:3px;  -webkit-border-radius:3px}
+ul.playlist li.sm2_paused .controls .statusbar .position{ background-color:#666;  border-color:#666}
+ul.playlist li .controls .statusbar .loading{background-color:#eee}
+ul.playlist li .controls .statusbar .position, ul.playlist li .controls .statusbar .loading{ width:0px}
+ul.playlist li.sm2_playing a.sm2_link, ul.playlist li.sm2_paused a.sm2_link{ margin-right:4.5em;}
+ul.playlist li div.timing{position:absolute;display:none;right:10px;top:20px;height:1em;margin:0;padding:0;text-align:left;letter-spacing:0.01em;font-size:2em;font-weight:100;line-height:0.5em;vertical-align:middle;font-family:"Helvetica Neue", "Helvetica", Arial, arial, verdana, sans-serif;}
+ul.playlist.use-peak li .timing{right:10px;}
+ul.playlist li:hover .timing{z-index:2;}
+ul.playlist li .timing div.sm2_timing{margin:0px;padding:0px;margin-top:-1em;text-shadow:0 0 0 #fff;}/* stupid Safari "fat"font rendering tweak */
+ul.playlist li.sm2_playing .timing, ul.playlist li.sm2_paused .timing{display:block}
+ul.playlist li.sm2_paused .timing .sm2_position{ text-decoration:blink;}/* hee hee. first actual appropriate use?:D */
+ul.playlist li.sm2_paused .timing, ul.playlist.use-peak li.sm2_paused .peak{background:transparent;border:0px solid #000;}
+
+	/* 6.1 DARK THEME (Sound Manager 2 mp3 Player styles) */
+	ul.playlist.dark li.sm2_playing a, ul.playlist.dark li.sm2_playing p {color:#fff}
+	ul.playlist.dark li.sm2_playing .timing, ul.playlist.use-peak.dark li.sm2_playing .peak{color:#999}
+	ul.playlist.use-spectrum.dark li.sm2_playing .spectrum-container{background-color:#222;border-color:#444}
+	ul.playlist.use-spectrum.dark li.sm2_playing .spectrum-container .spectrum{background-color:#999}
+	ul.playlist.dark li.sm2_paused{background-color:#333}
+	ul.playlist.dark li.sm2_paused a, ul.playlist.dark li.sm2_paused p {color:#999}
+	ul.playlist.dark li.sm2_playing, ul.playlist.dark li.sm2_playing:hover{background-color:#333}
+	ul.playlist.dark li:hover .controls .statusbar{background-color:#666}
+	ul.playlist.dark li .controls{background-color:#333;}
+	ul.playlist.dark li .controls .statusbar{background-color:#666;border-color:#444}
+	ul.playlist.dark li .controls .statusbar .position{background-color:#111;border-right:3px solid #111;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}
+	ul.playlist.dark li .controls .statusbar .loading{background-color:#444}
+	ul.playlist.dark li .timing, ul.playlist.use-peak.dark li .peak{background:transparent;border-width:0px;}
+	ul.playlist.dark.use-peak li .peak .l, ul.playlist.dark.use-peak li .peak .r{background:transparent;border-width:0px;}
+	
+	/* 6.2 MP3 LIST (1 Column)
+	------------------------------------------ */
+	div#mp3-list{width:820px;margin:0 auto;padding:0 0 3em 0;}
+	div#mp3-list h3 {margin:1.5em 0 1.5em 10px;width:800px;display:block;clear:both;float:none;}
+	div#mp3-list h3 span.mp3-feed {font-size:0.75em;font-weight:400;float:right;text-align:right;right:0;padding-top:3px;position:absolute;}
+	div#mp3-list h3 span.mp3-feed a{font-weight:400;}
+	div#mp3-list ul.playlist li {font-size:1.75em;padding-right:0;margin-right:0;}
+	div#mp3-list ul.playlist li img.alignleft { margin:0 10px 10px 0;float:left;}
+	div#mp3-list ul.playlist li a {width:62%;font-family:"HelveticaNeue-Heavy","Helvetica Neue Heavy","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#mp3-list ul.playlist li .timing {font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;width:32%;text-align:left;margin:inherit 0;padding:inherit 0;right:0;position:absolute;}
+	div#mp3-list ul.playlist li div.timing div.timing-data{padding-left:0;margin-left:0;}
+	div#mp3-list ul.playlist li p {width:410px;font-size:0.6em;margin:0;padding:0 20px 0.5em 0;float:left;display:table;}
+	div#mp3-list ul.playlist li span.entry-meta {float:right;display:block;margin:0.5em 0 0 0;padding: 0 0 0.5em 0;font-size:0.5em;text-align:left;line-height:0.4em;letter-spacing:0.015em;width:33%;}
+	div#mp3-list ul.playlist li span.entry-meta a {font-size:1.1em;font-weight:500;letter-spacing:0.015em;display:inline;font-family:"Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#mp3-list ul.playlist li span.entry-meta span {display:inline;}
+	
+	/* 6.3 MP3 COLUMN (2 Column)
+	------------------------------------------ */
+	div#mp3-column{width:370px;margin:0 2em 0 0;padding:0 0 3em 0;float:left;}
+	div#mp3-column h3 {margin:1.5em 0 1.5em 10px;width:360px;display:block;clear:both;float:none;}
+	div#mp3-column h3 span.mp3-feed {font-size:0.75em;font-weight:400;text-align:left;padding-top:2px;}
+	div#mp3-column h3 span.mp3-feed a {font-weight:400;}
+	div#mp3-column ul.playlist li {font-size:1.5em;margin-top:0;}
+	div#mp3-column ul.playlist li img.alignleft { margin:0 10px 10px 0;float:left;}
+	div#mp3-column ul.playlist li a {width:62%;font-family:"HelveticaNeue-Heavy","Helvetica Neue Heavy","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#mp3-column ul.playlist li .timing {font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#mp3-column ul.playlist li p {width:230px;font-size:0.75em;margin:0;padding:0 0 0.5em 0;float:left;display:table;}
+	div#mp3-column ul.playlist li span.entry-meta {float:right;display:block;margin:0.5em 0 0 0;padding: 0 0 0.5em 0;font-size:0.6em;text-align:right;line-height:0.4em;letter-spacing:0.015em;width:100%;}
+	div#mp3-column ul.playlist li span.entry-meta a {font-size:1.1em;font-weight:500;letter-spacing:0.015em;display:inline;font-family:"Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#mp3-column ul.playlist li span.entry-meta span {display:inline;}
+	
+	/* 6.4 BLOG CONTENT (1 Column)
+	------------------------------------------ */
+	div#blog-content {width:830px;height:1000px;margin:0 auto 3em auto;padding:3em 0 0 0;display:table;clear:both;float:none;}
+	div#blog-content h3 {margin:0 0 1.5em 1em;width:800px;display:block;clear:both;float:none;}
+	div#blog-content h2 span.entry-date {font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#blog-content div.post {width:390px;height:350px;padding:1em 1em 1em 1em;margin:0;overflow:hidden;float:left;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+	div#blog-content div.post.alt {border-right: 0px dotted #888;padding:1em 1em 1em 1em;margin:0;}
+	div#blog-content div.post:hover {background:#eee;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+	div#blog-content div.post h2 {font-size:3em;margin:0;font-weight:800;width:360px;display:inline;clear:both;float:none;}
+	div#blog-content div.post p {margin-bottom:1em;}
+	div#blog-content div.post .entry-date {clear:both;display:block;}
+	
+	/* 6.5 BLOG COLUMN (2 Column)
+	------------------------------------------ */
+	div#blog-column {width:370px;margin:0 auto;padding:0 0 3em 0;display:block;float:left;}
+	div#blog-column h3 {margin:1.5em 0 1.5em 10px;width:400px;display:block;clear:both;float:none;}
+	div#blog-column h2 span.entry-date {font-weight:100;font-family:"HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue","Helvetica",helvetica,arial,sans-serif;}
+	div#blog-column div.post {width:380px;padding:1em;margin:0;overflow:hidden;float:left;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+	div#blog-column div.post.alt {border-right: 0px dotted #888;padding:1em 1em 1em 1em;margin:0;}
+	div#blog-column div.post:hover {background:#eee;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+	div#blog-column div.post h2 {font-size:3em;margin:0;font-weight:800;width:380px;display:inline;}
+	div#blog-column div.post .entry-content p {margin-bottom:1em;}
+	div#blog-column div.post .entry-date {clear:both;display:block;}
+
+/* 7.0 NAVIGATION
+------------------------------------------ */
+
+div#nav-above {
+	display: none;
+}
+div#nav-below {
+	width: 800px;
+	margin: 0 auto;
+	height: 6em;
+	line-height: 6em;
+	display: block;
+	clear: both;
+}
+.alignleft, div.nav-previous {
+	float: left;
+}
+.alignright, div.nav-next {
+	float: right;
+}
+
+div.nav-next a,  div.nav-previous  a{
+			color:#fbe400;
+	background:#6E993D;
+	font-size:1.7em;
+	padding:1em 2em;
+	
+	
+}
+
+div.nav-next a:hover,  div.nav-previous  a:hover{
+	background-color:#1775A3;
+	
+}
+
+
+/* 8.0 COMMENTS & FORMS
+------------------------------------------ */
+div#comments {width:525px;margin:0;padding:3em 0;clear:both;}
+div#comments h2 {margin-bottom:1em;}
+div#comments h3 {/* width:100%;clear:both; */width:190px;margin:0;font-weight:800;display:block;position:static;float:left;clear:none;}
+div.comments ol, div.comments ul {list-style:none;margin:0;}
+div.comments ul li.comment {width:800px;padding:1em;margin:0;display:table;clear:both;list-style:none;float:none;border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px}
+div.comments ul li.comment img.avatar {float:left;display:block;position:relative;padding-right:1em;}
+div.comments ul li.comment:hover {background:#EEE;}
+div.comments ul li .comment-info{width:33%;float:left;display:block;}
+div.comments ul li .comment-text{width:66%;float:left;display:block;}
+div.comments ol li .comment-meta, div.comments ul li .comment-meta {color:#AFAFAF;font-size:0.9em;letter-spacing:.03em;}
+div#respond h3 {width:100%;clear:both;margin:3em 0 0 0;font-weight:800;display:block;position:static;float:none;}
+
+div.container form div {
+	padding:0;
+	padding-right: 5px;
+}
+
+textarea#comment{height:13em;margin:0;overflow:auto;width:100%;}
+form#commentform .form-label{margin: 0;padding:0px;}
+form#commentform span.required{background:#fff;color:red;}
+form#commentform,form#commentform p{padding:0;}
+input#author,input#email,input#url{width:100%;font-size:1.8em;}
+input#author,input#email,input#url,textarea#comment{padding:0;}
+code, kbd, samp, pre, tt, var, input[type="text"], input[type="password"], textarea {font-family:"Helvetica Neue","Helvetica",helvetica,arial,sans-serif; border:3px solid #1775A3;  width:90%; font-size:1.8em;}
+.container input#searchsubmit, .container input#submit, .container input#error404-searchsubmit {
+border: 0; background-color:#1775A3; color:#fbe400; padding:5px; font-size:1.3em; border:3px solid #1775A3;}
+
+.container input#searchsubmit, .container input#submit {width:100%;  margin-top:0.5em;}
+
+.container input#searchsubmit:hover, .container input#submit:hover, .container input#error404-searchsubmit:hover {
+color:#1775A3:
+background-color:#fbe400;
+}
+
+/* 9.0 SIDEBAR
+------------------------------------------ */
+
+div#sidebar-wrap {
+	width: 800px;
+	margin: 0 auto;
+	padding: 3em 0;
+	clear: both;
+}
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	padding: 0 0 3em 0;
+	width: 33.3%;
+}
+div.sidebar div, div.sidebar h3, div.sidebar ul, div.sidebar li {
+	margin: 0;
+	padding: 0;
+}
+div.sidebar h3 {
+	line-height: 2em;
+	padding: 2px 5px;
+	margin: 0;
+	font-weight: 800;
+	background:#AE1C60;
+	color:#fbe400;
+}
+div.sidebar input#s {
+	margin-top:5px;
+	width: 95%;
+}
+div.sidebar li {
+	list-style: none;
+	margin: 0 1em 1.5em 0em;
+}
+div.sidebar li form {
+	margin: 0;
+	padding: 0;
+}
+div.sidebar ul ul {
+	margin: 0 0 0 0;
+}
+div.sidebar ul ul li {
+	list-style: none;
+	margin: 0;
+}
+div.sidebar ul ul ul {
+	margin: 0;
+}
+div.sidebar ul ul ul li {
+	list-style: circle;
+}
+div#primary {
+	clear: both;
+}
+div.sidebar table#wp-calendar {
+	width: 100%;
+	float: none;
+}
+
+
+div.sidebar a:link, div.sidebar a:visited {margin-top:5px;background-color:#1775A3; color:#fbe400; padding:2px 3px;display:inline-block;}
+div.sidebar a:hover, div.sidebar a:active {text-decoration:none;background:#6E993D;}
+}
+
+/* 10.0 Wordpress 2.5+ Shortcode Styles
+------------------------------------------ */
+div.gallery{clear:both;float:left;width:100%;}
+div.gallery dl{float:left;text-align:center;}
+div.gallery dl dt{margin:0;}
+div.gallery dl dd{margin-left:0;}
+div.entry-attachment,div.entry-caption{text-align:center;}
+div.entry-attachment img,div#nav-images div img{overflow:hidden;}
+body.attachment div#nav-images{clear:both;width:100%;}
+body.attachment div#nav-images div{padding:1em 0;width:50%;}
+body.attachment div#nav-images div.nav-previous{text-align:left;}
+body.attachment div#nav-images div.nav-next{text-align:right;}
+body.attachment div#comments{clear:both;}
+
+/* 11.0 FOOTER
+------------------------------------------ */
+
+div#footer {
+	clear: left;
+	width: 100%;
+	height: 12em;
+	text-align: left;
+	background: #fbe400;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+div#footer-content {
+	width: 800px;
+	margin: 0 auto;
+	/*padding: 4em 0 2em 0;*/
+	padding: 1em;
+	background:#ffffff;
+	 border-radius: 10px 10px 0px 0px ;
+}
+
+div#footer-content img, div#footer-content a{
+	border:0;
+	margin:0;
+	padding:0;
+	display: inline-block; 
+} 
+
+
+h2 .page-title{
+	
+}
+
+/* Event list */
+
+.archive article.event{
+	display:block;
+	margin:0;
+	margin-bottom:10px;
+	padding:10px;
+}
+
+.event ul{
+	list-style-type: none;
+}
+
+
+.eo-event-meta li{
+		margin-bottom:1em;
+	font-size:1em;
+}
+.eo-event-meta li.lrg {
+font-size:1.7em;
+}
+
+.eo-event-meta li .venue-date{
+		background-color: #AE1C60;
+	color:#ffffff;
+	padding:3px 5px;
+}
+
+.eo-event-meta li .venueLabel{
+	margin-bottom:10px;
+}
+
+
+ul.eo-event-meta li a{
+			background-color:#1775A3;
+			color:#fbe400;
+			padding:1px 4px;
+			
+		}
+		
+		.entry-header li{
+		margin-bottom:0.5em;
+
+}
+
+.entry-header span.archiveTitle{
+			color:#fbe400;
+	background:#6E993D;
+	font-size:1.2em;
+	padding:1px 2px;
+	margin-bottom:10px;
+}
+
+.event-entry-meta time{
+	font-size:1.4em;
+			background-color: #AE1C60;
+	color:#ffffff;
+	padding:3px 5px;
+margin-bottom:10px;
+}
