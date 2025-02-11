@@ -1,3 +1,4 @@
+![](https://kerrybicyclefestival.github.io/wp-content/uploads/2010/04/kbf_logo2.jpg)
 ### Kerry Bicycle Festival
 
 Kerry Bicycle Festival is was a free festival which brings together a selection of diverse events which aim to celebrate the bicycle. This festival encompasses musical, artistic and outdoor events all of which are free and will take place within the environs of Tralee town.
